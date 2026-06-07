@@ -21,3 +21,18 @@ SELECT COUNT(president_id),
 FROM public.us_president
 --where president_party like '%ABC%' --and president_name like '%a%'
 GROUP BY president_party
+
+
+
+select * from public.us_president
+order by president_name
+
+
+
+select * from public.us_president
+where us_president.president_party is null
+order by president_name;
+
+select * from public.us_president
+where us_president.president_party is not null
+order by president_name
