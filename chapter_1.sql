@@ -1,4 +1,14 @@
+
+--identify all the databases
+
+SELECT datname
+FROM pg_database
+WHERE datistemplate = false
+ORDER BY datname;
+
 -- If the us_president table already exists, drop it before we recreate it
+\connect postgres_essentials;
+
 drop table if exists us_president;
 
 -- Create the table
